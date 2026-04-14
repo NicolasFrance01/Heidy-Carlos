@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carlos & Heidy | Wedding Photo Book</title>
+    <meta name="description" content="Recuerdos inolvidables de la boda de Carlos y Heidy. Galería de fotos y video.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Hero Section -->
+    <header class="hero" id="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content fade-in-up">
+            <h1 class="hero-title">Carlos <span class="ampersand">&</span> Heidy</h1>
+            <p class="hero-subtitle">Nuestra Historia de Amor</p>
+            <p class="hero-date">11 de Abril, 2026</p>
+            <a href="#gallery" class="scroll-down">
+                <span>Descubrir Momentos</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Video Section -->
+        <section id="video" class="section glass-section reveal">
+            <h2 class="section-title">Nuestra Boda en Movimiento</h2>
+            <p class="section-desc">Revive los momentos más especiales de nuestro día.</p>
+            <div class="media-showcase">
+                <div class="video-container">
+                    <video src="video/bodaresumen.mp4" controls preload="metadata"></video>
+                </div>
+                <div class="side-photo">
+                    <img src="video/foto.png" alt="Detalle de C&H">
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="section reveal">
+            <h2 class="section-title">Book de Fotos</h2>
+            <p class="section-desc">Detalles capturados para la eternidad. Selecciona una foto para verla completa o
+                descargarla.</p>
+            <div class="gallery-controls">
+                <button id="download-all-btn" class="btn-primary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Descargar Todas
+                </button>
+            </div>
+            <div class="gallery-grid" id="photo-grid">
+                <!-- Javascript will populate the photos here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <h3 class="footer-title">C & H</h3>
+            <p>Gracias por ser parte de nuestra historia.</p>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-overlay"></div>
+        <div class="lightbox-content">
+            <button id="lightbox-close" class="lightbox-close" aria-label="Cerrar">&times;</button>
+            <img id="lightbox-img" src="" alt="Vista ampliada">
+            <div class="lightbox-actions">
+                <a id="lightbox-download" href="" download class="btn-primary btn-lightbox">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Descargar esta foto
+                </a>
+            </div>
+            <button id="lightbox-prev" class="lightbox-nav lightbox-prev">&lsaquo;</button>
+            <button id="lightbox-next" class="lightbox-nav lightbox-next">&rsaquo;</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
