@@ -7,7 +7,7 @@ const photos = Array.from({ length: 62 }, (_, i) => {
     else if (i % 7 === 0) layoutClass = 'tall';
     
     return {
-        src: `fotos/H&C-${i + 1}.jpg`,
+        src: `fotos/H_C-${i + 1}.jpg`,
         class: layoutClass,
         alt: `Foto de la boda de C y H - ${i + 1}`
     };
