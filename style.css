@@ -75,7 +75,7 @@ a {
     position: relative;
     height: 100vh;
     min-height: 600px;
-    background: url('fotos/H&C-52.jpg') center/cover no-repeat fixed;
+    background: url('fotos/H_C-52.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -487,28 +487,16 @@ footer {
 
 /* ===== Animations ===== */
 .fade-in-up {
-    animation: fadeInUp 1.2s ease-out forwards;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    opacity: 1;
 }
 
 .reveal {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 1s cubic-bezier(0.25, 1, 0.5, 1);
+    opacity: 1;
+    transform: none;
+    transition: none;
 }
 
 .reveal.active {
     opacity: 1;
-    transform: translateY(0);
+    transform: none;
 }
