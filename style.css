@@ -290,7 +290,7 @@ main {
     }
 
     .gallery-grid {
-        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+        grid-template-columns: 1fr;
     }
 }
 
